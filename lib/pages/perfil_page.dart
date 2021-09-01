@@ -1,7 +1,5 @@
-import 'package:agite_se/pages/user_card.dart';
 import 'package:agite_se/shared/models/activity.dart';
 import 'package:agite_se/shared/models/event.dart';
-import 'package:agite_se/shared/models/user.dart';
 import 'package:flutter/material.dart';
 
 class PerfilPage extends StatefulWidget {
