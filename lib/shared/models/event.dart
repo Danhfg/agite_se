@@ -8,45 +8,53 @@ class Event {
   int changeXP;
   Color color;
 
-  Event(
-    this.avatar,
-    this.changeXP,
-    this.name,
-    this.color,
-  );
+  Event({
+    required this.avatar,
+    required this.changeXP,
+    required this.name,
+    required this.color,
+  });
 }
 
-List<Event> myEvents = [
-  Event(
-    Icon(
-      TablerIcons.pokeball,
+class SingletonTwo {
+  List<Event> myEvents = [
+    Event(
+      avatar: Icon(
+        TablerIcons.pokeball,
+      ),
+      changeXP: 30,
+      name: "Pokemon Go",
+      color: Colors.green.shade100,
     ),
-    30,
-    "Pokemon Go",
-    Colors.green.shade100,
-  ),
-  Event(
-    Icon(
-      FontAwesomeIcons.running,
+    Event(
+      avatar: Icon(
+        FontAwesomeIcons.running,
+      ),
+      changeXP: 15,
+      name: "Corrida em grupo",
+      color: Colors.green.shade100,
     ),
-    15,
-    "Corrida em grupo",
-    Colors.green.shade100,
-  ),
-  Event(
-    Icon(
-      FontAwesomeIcons.running,
+    Event(
+      avatar: Icon(
+        FontAwesomeIcons.running,
+      ),
+      changeXP: 15,
+      name: "Corrida em grupo",
+      color: Colors.green.shade100,
     ),
-    15,
-    "Corrida em grupo",
-    Colors.green.shade100,
-  ),
-  Event(
-    Icon(
-      FontAwesomeIcons.walking,
+    Event(
+      avatar: Icon(
+        FontAwesomeIcons.walking,
+      ),
+      changeXP: 10,
+      name: "Caminhada em grupo",
+      color: Colors.green.shade100,
     ),
-    10,
-    "Caminhada em grupo",
-    Colors.green.shade100,
-  ),
-];
+  ];
+
+  SingletonTwo._privateConstructor();
+
+  static final SingletonTwo instance = SingletonTwo._privateConstructor();
+}
+
+List<Event> myEvents = SingletonTwo.instance.myEvents;

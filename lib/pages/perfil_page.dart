@@ -1,5 +1,6 @@
 import 'package:agite_se/shared/models/activity.dart';
 import 'package:agite_se/shared/models/event.dart';
+import 'package:agite_se/shared/models/futureActivity.dart';
 import 'package:flutter/material.dart';
 
 class PerfilPage extends StatefulWidget {
@@ -119,7 +120,7 @@ class _PerfilPageState extends State<PerfilPage> {
                                     children: [
                                       Text(
                                         "+" +
-                                            myActivitys[index]
+                                            myEvents[index]
                                                 .changeXP
                                                 .toString() +
                                             " XP",
@@ -240,7 +241,7 @@ class _PerfilPageState extends State<PerfilPage> {
                   child: Column(
                     children: [
                       ListView.separated(
-                        itemCount: myActivitys.length,
+                        itemCount: myFutureActivitys.length,
                         shrinkWrap: true,
                         physics: NeverScrollableScrollPhysics(),
                         separatorBuilder: (context, index) {
@@ -261,7 +262,7 @@ class _PerfilPageState extends State<PerfilPage> {
                                         CrossAxisAlignment.start,
                                     children: [
                                       Text(
-                                        myActivitys[index].name,
+                                        myFutureActivitys[index].name,
                                         style: TextStyle(
                                             // color: Color(0xfffcd76b),
                                             fontWeight: FontWeight.w700,
@@ -281,13 +282,8 @@ class _PerfilPageState extends State<PerfilPage> {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: [
-                                      Text(
-                                        "...",
-                                        maxLines: 1,
-                                        style: TextStyle(
-                                            // color: Color(0xfffcd76b),
-                                            fontWeight: FontWeight.w700,
-                                            fontSize: 16),
+                                      Icon(
+                                        myFutureActivitys[index].avatar.icon,
                                       ),
                                     ],
                                   ),

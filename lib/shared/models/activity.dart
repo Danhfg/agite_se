@@ -8,45 +8,45 @@ class Activity {
   int changeXP;
   Color color;
 
-  Activity(
-    this.avatar,
-    this.changeXP,
-    this.name,
-    this.color,
-  );
+  Activity({
+    required this.avatar,
+    required this.changeXP,
+    required this.name,
+    required this.color,
+  });
 }
 
 List<Activity> myActivitys = [
   Activity(
-    Icon(
+    avatar: Icon(
       TablerIcons.pokeball,
     ),
-    35,
-    "Musculação",
-    Colors.green.shade100,
+    changeXP: 35,
+    name: "Musculação",
+    color: Colors.green.shade100,
   ),
   Activity(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.running,
     ),
-    25,
-    "Caminhada matinal",
-    Colors.green.shade100,
+    changeXP: 25,
+    name: "Caminhada matinal",
+    color: Colors.green.shade100,
   ),
   Activity(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.running,
     ),
-    15,
-    "Caminhada matinal",
-    Colors.green.shade100,
+    changeXP: 15,
+    name: "Caminhada matinal",
+    color: Colors.green.shade100,
   ),
   Activity(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.walking,
     ),
-    15,
-    "Cardio",
-    Colors.green.shade100,
+    changeXP: 15,
+    name: "Cardio",
+    color: Colors.green.shade100,
   ),
 ];

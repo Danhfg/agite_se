@@ -8,45 +8,54 @@ class FutureActivity {
   int changeXP;
   Color color;
 
-  FutureActivity(
-    this.avatar,
-    this.changeXP,
-    this.name,
-    this.color,
-  );
+  FutureActivity({
+    required this.avatar,
+    required this.changeXP,
+    required this.name,
+    required this.color,
+  });
 }
 
-List<FutureActivity> myFutureActivitys = [
-  FutureActivity(
-    Icon(
-      TablerIcons.pokeball,
+class SingletonThree {
+  List<FutureActivity> myFutureActivitys = [
+    FutureActivity(
+      avatar: Icon(
+        TablerIcons.pokeball,
+      ),
+      changeXP: 35,
+      name: "Pokemon GO",
+      color: Colors.green.shade100,
     ),
-    35,
-    "Musculação",
-    Colors.green.shade100,
-  ),
-  FutureActivity(
-    Icon(
-      FontAwesomeIcons.running,
+    FutureActivity(
+      avatar: Icon(
+        FontAwesomeIcons.running,
+      ),
+      changeXP: 25,
+      name: "Calistenia",
+      color: Colors.green.shade100,
     ),
-    25,
-    "Calistenia",
-    Colors.green.shade100,
-  ),
-  FutureActivity(
-    Icon(
-      FontAwesomeIcons.running,
+    FutureActivity(
+      avatar: Icon(
+        FontAwesomeIcons.walking,
+      ),
+      changeXP: 15,
+      name: "Caminhada matinal",
+      color: Colors.green.shade100,
     ),
-    15,
-    "Caminhada matinal",
-    Colors.green.shade100,
-  ),
-  FutureActivity(
-    Icon(
-      FontAwesomeIcons.walking,
+    FutureActivity(
+      avatar: Icon(
+        TablerIcons.ball_tennis,
+      ),
+      changeXP: 15,
+      name: "Tênis",
+      color: Colors.green.shade100,
     ),
-    15,
-    "Cardio",
-    Colors.green.shade100,
-  ),
-];
+  ];
+
+  SingletonThree._privateConstructor();
+
+  static final SingletonThree instance = SingletonThree._privateConstructor();
+}
+
+List<FutureActivity> myFutureActivitys =
+    SingletonThree.instance.myFutureActivitys;

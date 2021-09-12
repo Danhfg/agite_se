@@ -7,85 +7,85 @@ class User {
   int changeXP;
   Color color;
 
-  User(
-    this.avatar,
-    this.changeXP,
-    this.name,
-    this.color,
-  );
+  User({
+    required this.avatar,
+    required this.changeXP,
+    required this.name,
+    required this.color,
+  });
 }
 
 List<User> myUsers = [
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userCircle,
     ),
-    3000,
-    "Você",
-    Colors.green.shade100,
+    changeXP: 3000,
+    name: "Você",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userTie,
     ),
-    2500,
-    "Daniel",
-    Colors.green.shade100,
+    changeXP: 2500,
+    name: "Daniel",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userNurse,
     ),
-    2000,
-    "Maria B",
-    Colors.green.shade100,
+    changeXP: 2000,
+    name: "Maria B",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userSecret,
     ),
-    1500,
-    "Enzo",
-    Colors.green.shade100,
+    changeXP: 1500,
+    name: "Enzo",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userAstronaut,
     ),
-    1000,
-    "João A",
-    Colors.green.shade100,
+    changeXP: 1000,
+    name: "João A",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userAlt,
     ),
-    550,
-    "Cláudia",
-    Colors.green.shade100,
+    changeXP: 550,
+    name: "Cláudia",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userGraduate,
     ),
-    350,
-    "Maria A",
-    Colors.green.shade100,
+    changeXP: 350,
+    name: "Maria A",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userNinja,
     ),
-    300,
-    "João B",
-    Colors.green.shade100,
+    changeXP: 300,
+    name: "João B",
+    color: Colors.green.shade100,
   ),
   User(
-    Icon(
+    avatar: Icon(
       FontAwesomeIcons.userMd,
     ),
-    300,
-    "Embla",
-    Colors.green.shade100,
+    changeXP: 300,
+    name: "Embla",
+    color: Colors.green.shade100,
   ),
 ];

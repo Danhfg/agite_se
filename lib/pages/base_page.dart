@@ -1,3 +1,6 @@
+import 'package:agite_se/pages/activity_page.dart';
+import 'package:agite_se/pages/event_page.dart';
+import 'package:agite_se/pages/home_page.dart';
 import 'package:agite_se/pages/perfil_page.dart';
 import 'package:agite_se/pages/ranking_page.dart';
 import 'package:flutter/material.dart';
@@ -12,12 +15,12 @@ class BasePage extends StatefulWidget {
 }
 
 class _BasePageState extends State<BasePage> {
-  int _selectedItem = 0;
+  int _selectedItem = 2;
 
   static const List<Widget> _wigetOptions = <Widget>[
-    RankingPage(),
-    RankingPage(),
-    RankingPage(),
+    ActivityPage(),
+    EventPage(),
+    HomePage(),
     RankingPage(),
     PerfilPage(),
   ];
@@ -37,13 +40,13 @@ class _BasePageState extends State<BasePage> {
             icon: Icon(
               FontAwesomeIcons.running,
             ),
-            label: "Home",
+            label: "Atividades",
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              TablerIcons.pokeball,
+              TablerIcons.olympics,
             ),
-            label: "Home",
+            label: "Eventos",
           ),
           BottomNavigationBarItem(
             icon: Icon(
